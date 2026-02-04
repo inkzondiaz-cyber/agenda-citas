@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agenda tu cita</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    .container {
+      background: #fff;
+      max-width: 420px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    input, textarea, button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+    }
+    button {
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Agenda tu cita de tatuaje</h2>
+
+  <form action="https://formsubmit.co/pinzonjuanita64@gmail.com" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre completo" required>
+    <input type="email" name="email" placeholder="Correo electrónico" required>
+    <input type="text" name="whatsapp" placeholder="WhatsApp" required>
+    <input type="date" name="fecha" required>
+    <textarea name="idea" placeholder="Cuéntame tu idea de tatuaje"></textarea>
+
+    <button type="submit">Agendar cita</button>
+
+    <input type="hidden" name="_subject" value="🖤 Nueva cita de tatuaje">
+    <input type="hidden" name="_autoresponse"
+      value="Gracias por agendar tu cita 💉✨ En breve me pondré en contacto contigo para confirmar.">
+    <input type="hidden" name="_template" value="table">
+  </form>
+</div>
+
+</body>
+</html>
