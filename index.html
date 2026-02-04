@@ -6,8 +6,8 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #eaeaea, #f5f5f5);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -15,14 +15,21 @@
     }
     .container {
       background: #ffffff;
-      padding: 25px;
-      border-radius: 14px;
+      padding: 28px;
+      border-radius: 18px;
       width: 100%;
-      max-width: 450px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      max-width: 460px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
     }
-    h2, h3 {
+    h2 {
       text-align: center;
+      margin-bottom: 5px;
+    }
+    h3 {
+      text-align: center;
+      font-weight: normal;
+      margin-bottom: 20px;
+      color: #555;
     }
     label {
       font-weight: bold;
@@ -31,34 +38,50 @@
     }
     input, textarea {
       width: 100%;
-      padding: 10px;
+      padding: 11px;
       margin-top: 6px;
-      border-radius: 8px;
+      border-radius: 10px;
       border: 1px solid #ccc;
+    }
+    .nota {
+      background: #f2f2f2;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      margin-top: 15px;
     }
     button {
       width: 100%;
       margin-top: 18px;
-      padding: 12px;
+      padding: 13px;
       background: #000;
       color: #fff;
       border: none;
-      border-radius: 10px;
+      border-radius: 12px;
       font-size: 16px;
       cursor: pointer;
     }
-    .pago {
-      background: #f0f0f0;
-      padding: 15px;
-      border-radius: 10px;
-      margin-top: 20px;
-      font-size: 14px;
-    }
     .whatsapp {
       background: #25D366;
-      margin-top: 12px;
+      margin-top: 10px;
+    }
+    .pago {
+      background: #f7f7f7;
+      padding: 14px;
+      border-radius: 12px;
+      margin-top: 18px;
+      font-size: 14px;
     }
   </style>
+
+  <script>
+    // bloquear fechas pasadas
+    window.onload = function () {
+      const fechaInput = document.getElementById("fecha");
+      const hoy = new Date().toISOString().split("T")[0];
+      fechaInput.min = hoy;
+    }
+  </script>
 </head>
 
 <body>
@@ -79,16 +102,15 @@
     <label>WhatsApp</label>
     <input type="text" name="WhatsApp" required>
 
-    <label>Fecha</label>
-    <input type="date" name="Fecha" required>
+    <label>Fecha de la cita</label>
+    <input type="date" id="fecha" name="Fecha" required>
 
-    <label>Hora</label>
-    <input type="time" name="Hora" required>
+    <label>Hora (10:00 am – 6:00 pm)</label>
+    <input type="time" name="Hora" min="10:00" max="18:00" required>
 
     <label>Idea del tatuaje</label>
     <textarea name="Idea" rows="4" required></textarea>
 
-    <!-- CONFIGURACIÓN -->
     <input type="hidden" name="_subject" value="🖤 Nueva cita - Inkzontattoo">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_captcha" value="false">
@@ -96,20 +118,20 @@
     <button type="submit">Enviar solicitud 🖤</button>
   </form>
 
-  <!-- SECCIÓN ANTICIPO -->
-  <div class="pago">
-    <strong>🔒 Anticipo obligatorio: $20.000 COP</strong><br><br>
-
-    Métodos de pago disponibles:<br>
-    • Nequi: <strong>312 533 7015</strong><br>
-    • Daviplata: <strong>312 533 7015</strong><br>
-    • Bancolombia: <strong>13894989461</strong><br><br>
-
-    ❗ El anticipo es <strong>NO REEMBOLSABLE</strong> y asegura tu cita.
+  <div class="nota">
+    ⏰ Horario de atención: <strong>Lunes a sábado</strong><br>
+    ⚠️ La cita queda confirmada solo después del anticipo.<br>
+    ❗ No se atienden dos personas en el mismo horario.
   </div>
 
-  <!-- WHATSAPP -->
-  <a href="https://wa.me/573125337015?text=Hola%20buenas,%20ya%20realicé%20el%20anticipo%20de%2020.000%20para%20mi%20cita%20de%20tatuaje"
+  <div class="pago">
+    🔒 <strong>Anticipo obligatorio: $20.000 COP</strong><br><br>
+    Nequi / Daviplata: <strong>312 533 7015</strong><br>
+    Bancolombia: <strong>13894989461</strong><br><br>
+    ❌ Anticipo NO reembolsable
+  </div>
+
+  <a href="https://wa.me/573125337015?text=Hola%20buenas,%20ya%20realicé%20el%20anticipo%20de%2020.000%20para%20mi%20cita"
      target="_blank">
     <button class="whatsapp">Enviar comprobante por WhatsApp 💬</button>
   </a>
