@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>Agenda tu cita | Inkzontattoo</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f7f7f7;
+      background: #f5f5f5;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
     }
     form {
-      background: white;
+      background: #ffffff;
       padding: 25px;
-      border-radius: 12px;
+      border-radius: 14px;
       width: 100%;
-      max-width: 400px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      max-width: 420px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
     }
     h2 {
       text-align: center;
@@ -26,21 +27,24 @@
     }
     label {
       font-weight: bold;
-      margin-top: 10px;
+      margin-top: 12px;
       display: block;
     }
-    input, textarea, button {
+    input, textarea {
       width: 100%;
       padding: 10px;
-      margin-top: 5px;
-      border-radius: 6px;
+      margin-top: 6px;
+      border-radius: 8px;
       border: 1px solid #ccc;
     }
     button {
+      width: 100%;
       margin-top: 20px;
+      padding: 12px;
       background: #000;
-      color: white;
+      color: #fff;
       border: none;
+      border-radius: 10px;
       font-size: 16px;
       cursor: pointer;
     }
@@ -48,11 +52,22 @@
       background: #333;
     }
   </style>
+
+  <script>
+    function enviarFormulario() {
+      setTimeout(function () {
+        window.location.href =
+          "https://wa.me/573125337015?text=Hola%20buenas,%20Acabo%20de%20Agenda%20una%20cita%20contigo";
+      }, 1200);
+    }
+  </script>
 </head>
 
 <body>
 
-<form action="https://formsubmit.co/inkzondiaz@gmail.com" method="POST">
+<form action="https://formsubmit.co/inkzondiaz@gmail.com"
+      method="POST"
+      onsubmit="enviarFormulario()">
 
   <h2>Agenda tu cita ✍️🖤  
   <br>Inkzontattoo by: Juanita</h2>
@@ -75,18 +90,14 @@
   <label>Idea del tatuaje</label>
   <textarea name="Idea" rows="4" required></textarea>
 
-  <!-- CONFIGURACIÓN -->
+  <!-- CONFIGURACIÓN FORM SUBMIT -->
   <input type="hidden" name="_subject" value="🖤 Nueva cita - Inkzontattoo">
   <input type="hidden" name="_template" value="table">
   <input type="hidden" name="_captcha" value="false">
 
-  <!-- RESPUESTA AUTOMÁTICA -->
+  <!-- RESPUESTA AUTOMÁTICA AL CLIENTE -->
   <input type="hidden" name="_autoresponse"
     value="Hola 💖 Gracias por agendar tu cita con Inkzontattoo by Juanita. En breve te escribiré para confirmarla.">
-
-  <!-- REDIRECCIÓN A WHATSAPP -->
-  <input type="hidden" name="_next"
-    value="https://wa.me/573125337015?text=Hola%20buenas,%20Acabo%20de%20Agenda%20una%20cita%20contigo">
 
   <button type="submit">Agendar cita 🖤</button>
 
