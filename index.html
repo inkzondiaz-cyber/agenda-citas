@@ -48,28 +48,18 @@
       font-size: 16px;
       cursor: pointer;
     }
-    button:hover {
-      background: #333;
+    .whatsapp {
+      background: #25D366;
+      margin-top: 10px;
     }
   </style>
-
-  <script>
-    function enviarFormulario() {
-      setTimeout(function () {
-        window.location.href =
-          "https://wa.me/573125337015?text=Hola%20buenas,%20Acabo%20de%20Agenda%20una%20cita%20contigo";
-      }, 1200);
-    }
-  </script>
 </head>
 
 <body>
 
-<form action="https://formsubmit.co/inkzondiaz@gmail.com"
-      method="POST"
-      onsubmit="enviarFormulario()">
+<form action="https://formsubmit.co/inkzondiaz@gmail.com" method="POST">
 
-  <h2>Agenda tu cita ✍️🖤  
+  <h2>Agenda tu cita 🖤  
   <br>Inkzontattoo by: Juanita</h2>
 
   <label>Nombre</label>
@@ -81,27 +71,27 @@
   <label>WhatsApp</label>
   <input type="text" name="WhatsApp" required>
 
-  <label>Fecha de la cita</label>
+  <label>Fecha</label>
   <input type="date" name="Fecha" required>
 
-  <label>Hora de la cita</label>
+  <label>Hora</label>
   <input type="time" name="Hora" required>
 
   <label>Idea del tatuaje</label>
   <textarea name="Idea" rows="4" required></textarea>
 
-  <!-- CONFIGURACIÓN FORM SUBMIT -->
+  <!-- CONFIGURACIÓN -->
   <input type="hidden" name="_subject" value="🖤 Nueva cita - Inkzontattoo">
   <input type="hidden" name="_template" value="table">
   <input type="hidden" name="_captcha" value="false">
 
-  <!-- RESPUESTA AUTOMÁTICA AL CLIENTE -->
-  <input type="hidden" name="_autoresponse"
-    value="Hola 💖 Gracias por agendar tu cita con Inkzontattoo by Juanita. En breve te escribiré para confirmarla.">
-
-  <button type="submit">Agendar cita 🖤</button>
-
+  <button type="submit">Enviar solicitud 🖤</button>
 </form>
+
+<a href="https://wa.me/573125337015?text=Hola%20buenas,%20Acabo%20de%20agendar%20una%20cita%20contigo"
+   target="_blank">
+  <button class="whatsapp">Confirmar por WhatsApp 💬</button>
+</a>
 
 </body>
 </html>
