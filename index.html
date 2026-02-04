@@ -13,17 +13,16 @@
       align-items: center;
       min-height: 100vh;
     }
-    form {
+    .container {
       background: #ffffff;
       padding: 25px;
       border-radius: 14px;
       width: 100%;
-      max-width: 420px;
+      max-width: 450px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.12);
     }
-    h2 {
+    h2, h3 {
       text-align: center;
-      margin-bottom: 20px;
     }
     label {
       font-weight: bold;
@@ -39,7 +38,7 @@
     }
     button {
       width: 100%;
-      margin-top: 20px;
+      margin-top: 18px;
       padding: 12px;
       background: #000;
       color: #fff;
@@ -48,50 +47,74 @@
       font-size: 16px;
       cursor: pointer;
     }
+    .pago {
+      background: #f0f0f0;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
     .whatsapp {
       background: #25D366;
-      margin-top: 10px;
+      margin-top: 12px;
     }
   </style>
 </head>
 
 <body>
 
-<form action="https://formsubmit.co/inkzondiaz@gmail.com" method="POST">
+<div class="container">
 
-  <h2>Agenda tu cita 🖤  
-  <br>Inkzontattoo by: Juanita</h2>
+  <h2>Agenda tu cita 🖤</h2>
+  <h3>Inkzontattoo by: Juanita</h3>
 
-  <label>Nombre</label>
-  <input type="text" name="Nombre" required>
+  <form action="https://formsubmit.co/inkzondiaz@gmail.com" method="POST">
 
-  <label>Email</label>
-  <input type="email" name="Email" required>
+    <label>Nombre</label>
+    <input type="text" name="Nombre" required>
 
-  <label>WhatsApp</label>
-  <input type="text" name="WhatsApp" required>
+    <label>Email</label>
+    <input type="email" name="Email" required>
 
-  <label>Fecha</label>
-  <input type="date" name="Fecha" required>
+    <label>WhatsApp</label>
+    <input type="text" name="WhatsApp" required>
 
-  <label>Hora</label>
-  <input type="time" name="Hora" required>
+    <label>Fecha</label>
+    <input type="date" name="Fecha" required>
 
-  <label>Idea del tatuaje</label>
-  <textarea name="Idea" rows="4" required></textarea>
+    <label>Hora</label>
+    <input type="time" name="Hora" required>
 
-  <!-- CONFIGURACIÓN -->
-  <input type="hidden" name="_subject" value="🖤 Nueva cita - Inkzontattoo">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_captcha" value="false">
+    <label>Idea del tatuaje</label>
+    <textarea name="Idea" rows="4" required></textarea>
 
-  <button type="submit">Enviar solicitud 🖤</button>
-</form>
+    <!-- CONFIGURACIÓN -->
+    <input type="hidden" name="_subject" value="🖤 Nueva cita - Inkzontattoo">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
 
-<a href="https://wa.me/573125337015?text=Hola%20buenas,%20Acabo%20de%20agendar%20una%20cita%20contigo"
-   target="_blank">
-  <button class="whatsapp">Confirmar por WhatsApp 💬</button>
-</a>
+    <button type="submit">Enviar solicitud 🖤</button>
+  </form>
+
+  <!-- SECCIÓN ANTICIPO -->
+  <div class="pago">
+    <strong>🔒 Anticipo obligatorio: $20.000 COP</strong><br><br>
+
+    Métodos de pago disponibles:<br>
+    • Nequi: <strong>312 533 7015</strong><br>
+    • Daviplata: <strong>312 533 7015</strong><br>
+    • Bancolombia: <strong>13894989461</strong><br><br>
+
+    ❗ El anticipo es <strong>NO REEMBOLSABLE</strong> y asegura tu cita.
+  </div>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/573125337015?text=Hola%20buenas,%20ya%20realicé%20el%20anticipo%20de%2020.000%20para%20mi%20cita%20de%20tatuaje"
+     target="_blank">
+    <button class="whatsapp">Enviar comprobante por WhatsApp 💬</button>
+  </a>
+
+</div>
 
 </body>
 </html>
